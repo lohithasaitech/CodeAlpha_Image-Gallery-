@@ -61,7 +61,7 @@ function changeImage(step){
     }
 
     document.getElementById("popup-img").src =
-        imageList[currentIndex].src;
+    imageList[currentIndex].src;
 
 }
 
