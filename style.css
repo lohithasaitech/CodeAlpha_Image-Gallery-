@@ -27,16 +27,16 @@ header p{
 }
 
 .filters button{
-    padding:8px 15px;
+    padding:10px 18px;
     margin:5px;
     border:none;
     background:#ddd;
-    border-radius:4px;
+    border-radius:5px;
     cursor:pointer;
 }
 
-.filters button.active,
-.filters button:hover{
+.filters button:hover,
+.filters button.active{
     background:#4a90e2;
     color:white;
 }
@@ -51,8 +51,9 @@ header p{
 
 .photo{
     background:white;
-    border-radius:5px;
+    border-radius:8px;
     overflow:hidden;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
 .photo img{
@@ -74,13 +75,16 @@ header p{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
 }
 
 #popup-img{
     max-width:80%;
     max-height:80vh;
-    margin-top:50px;
+    border-radius:8px;
 }
 
 .close{
@@ -97,8 +101,8 @@ header p{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    border:none;
     background:none;
+    border:none;
     color:white;
     font-size:30px;
     cursor:pointer;
@@ -117,6 +121,23 @@ header p{
 }
 
 footer{
-    margin-top:25px;
+    margin-top:30px;
     color:#555;
-  }
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:32px;
+    }
+
+    .btn-prev,
+    .btn-next{
+        font-size:24px;
+    }
+
+    #popup-img{
+        max-width:90%;
+    }
+
+    }
