@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Created by Lohitha Sai</p>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('cars')">Cars</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <div class="photo nature">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500"
+                alt="Nature Image"
+                onclick="openImage(this)">
+        </div>
+
+        <div class="photo cars">
+            <img src="https://images.unsplash.com/photo-1502877338535-493e505315b4?w=500"
+                alt="Car Image"
+                onclick="openImage(this)">
+        </div>
+
+        <div class="photo nature">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500"
+                alt="Nature Image"
+                onclick="openImage(this)">
+        </div>
+
+        <div class="photo cars">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500"
+                alt="Car Image"
+                onclick="openImage(this)">
+        </div>
+
+        <div class="photo nature">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500"
+                alt="Nature Image"
+                onclick="openImage(this)">
+        </div>
+
+        <div class="photo cars">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500"
+                alt="Car Image"
+                onclick="openImage(this)">
+        </div>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <span class="close-btn" onclick="closeImage()">&times;</span>
+
+        <button class="prev-btn" onclick="changeImage(-1)">
+            &#10094;
+        </button>
+
+        <img id="popup-img" src="" alt="Preview">
+
+        <button class="next-btn" onclick="changeImage(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Simple Gallery Project - Lohitha Sai</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+          </html>
