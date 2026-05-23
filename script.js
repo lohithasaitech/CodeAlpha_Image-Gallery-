@@ -1,7 +1,7 @@
 let currentIndex = 0;
 let imageList = [];
 
-function filterImages(category){
+function filterImages(category, event){
 
     let buttons = document.querySelectorAll(".filters button");
 
@@ -38,7 +38,7 @@ function openImage(img){
     currentIndex = imageList.indexOf(img);
 
     document.getElementById("popup-img").src = img.src;
-    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox").style.display = "flex";
 
 }
 
