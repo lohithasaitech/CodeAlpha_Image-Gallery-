@@ -1,11 +1,12 @@
 let currentIndex = 0;
 let imageList = [];
 
-function filterImages(category, event){
+// Filter images
+function filterImages(category, event) {
 
     let buttons = document.querySelectorAll(".filters button");
 
-    buttons.forEach(function(btn){
+    buttons.forEach(function(btn) {
         btn.classList.remove("active");
     });
 
@@ -13,15 +14,15 @@ function filterImages(category, event){
 
     let photos = document.querySelectorAll(".photo");
 
-    photos.forEach(function(photo){
+    photos.forEach(function(photo) {
 
-        if(category === "all"){
+        if (category === "all") {
             photo.classList.remove("hide");
         }
-        else if(photo.classList.contains(category)){
+        else if (photo.classList.contains(category)) {
             photo.classList.remove("hide");
         }
-        else{
+        else {
             photo.classList.add("hide");
         }
 
@@ -29,7 +30,8 @@ function filterImages(category, event){
 
 }
 
-function openImage(img){
+// Open image
+function openImage(img) {
 
     imageList = Array.from(
         document.querySelectorAll(".photo:not(.hide) img")
@@ -42,34 +44,36 @@ function openImage(img){
 
 }
 
-function closeImage(){
+// Close image
+function closeImage() {
 
     document.getElementById("lightbox").style.display = "none";
 
 }
 
-function changeImage(step){
+// Next / Previous image
+function changeImage(step) {
 
     currentIndex += step;
 
-    if(currentIndex >= imageList.length){
+    if (currentIndex >= imageList.length) {
         currentIndex = 0;
     }
 
-    if(currentIndex < 0){
+    if (currentIndex < 0) {
         currentIndex = imageList.length - 1;
     }
 
     document.getElementById("popup-img").src =
-    imageList[currentIndex].src;
+        imageList[currentIndex].src;
 
 }
 
-window.onclick = function(e){
+window.onclick = function(e) {
 
     let lightbox = document.getElementById("lightbox");
 
-    if(e.target === lightbox){
+    if (e.target === lightbox) {
         closeImage();
     }
 
