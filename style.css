@@ -11,6 +11,8 @@ body{
     padding:20px;
 }
 
+/* Header */
+
 header h1{
     color:#333;
     margin-top:20px;
@@ -21,6 +23,8 @@ header p{
     margin-top:5px;
     margin-bottom:25px;
 }
+
+/* Filters */
 
 .filters{
     margin-bottom:25px;
@@ -33,6 +37,7 @@ header p{
     background:#ddd;
     border-radius:5px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 .filters button.active,
@@ -40,6 +45,8 @@ header p{
     background:#4a90e2;
     color:white;
 }
+
+/* Gallery */
 
 .gallery{
     max-width:1000px;
@@ -63,11 +70,14 @@ header p{
     display:block;
     cursor:pointer;
     background:#eee;
+    transition:0.3s;
 }
 
 .photo img:hover{
-    opacity:0.9;
+    opacity:0.85;
 }
+
+/* Lightbox */
 
 .lightbox{
     display:none;
@@ -125,6 +135,8 @@ footer{
     margin-top:30px;
     color:#555;
 }
+
+/* Mobile */
 
 @media(max-width:600px){
 
